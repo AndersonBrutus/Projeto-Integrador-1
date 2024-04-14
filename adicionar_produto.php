@@ -48,7 +48,7 @@
                 <input type="text" class="form-control" name="produto"  placeholder="Insira o nome do produto" autocomplete="off" required >
                   </div>
 
-                <div style="padding-top: 20px">
+            <div style="padding-top: 20px">
 
                     <label>Categoria</label>
                     <select class="form-select" name="categoria" aria-label="Categoria">
@@ -70,14 +70,31 @@
                       
                     </select>
 
-                <div style="padding-top: 20px">
+            <div style="padding-top: 20px">
 
-            <div class="form-group">
-                <label>Fornecedor</label>
-                <input type="text" class="form-control" name="fornecedor" placeholder="Insira o fornecedor" required>
-                  </div>
+                <div class="form-group">
+                    <label>Fornecedor</label>
+                    <select class="form-select" name="fornecedor" aria-label="Fornecedor">
+                    <?php
+                    include 'conexao.php';
+                    $sql2 = "SELECT * FROM fornecedor order by nome_form ASC";
+                    $buscar2 = mysqli_query($conexao, $sql2);
 
-                <div style="padding-top: 20px">
+                    while ($array2 = mysqli_fetch_array($buscar2)) {
+                        $id_fornecedor = $array2['id_form'];
+                        $nome_fornecedor = $array2['nome_form'];
+                    ?>
+
+                        <option><?php echo $nome_fornecedor?></option>
+
+
+                    <?php } ?>
+
+                    </select>
+                </div>
+                
+
+            <div style="padding-top: 20px">
 
             <div class="form-group">
                 <label>Aplicação</label>

@@ -28,14 +28,14 @@
                 <a href="index.php" role="button" class="btn btn-sm btn-primary">Voltar</a>
     </div>
 
-	<h4>Cadastro de Categoria</h4>
+	<h4>Cadastro de Fornededor</h4>
 	</br>
-	<form action="_inserir_categoria.php" method="post">
+	<form action="_inserir_fornecedor.php" method="post">
 		
-		<label>Categoria</label>		
+		<label>Fornecedor</label>		
 		<div class="form-group">
 			
-			<input type="text" name="categoria" class="form-control" placeholder="Digite o nome da Categoria" autocomplete="off">
+			<input type="text" name="fornecedor" class="form-control" placeholder="Digite o nome do Fornecedor" autocomplete="off">
 		</div>
 		</br>
 		<div style="text-align: right">
