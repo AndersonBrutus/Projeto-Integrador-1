@@ -50,15 +50,25 @@
 
                 <div style="padding-top: 20px">
 
-            <label>Categoria</label>
-                <select class="form-select" name="categoria" aria-label="Categoria">
-                        <option selected>Selecione a categoria</option>
-                        <option value="Peça">Peça</option>
-                        <option value="Acessório">Acessório</option>
-                        <option value="Lubrificantes">Lubrificante</option>
-                        <option value="Bateria">Bateria</option>
+                    <label>Categoria</label>
+                    <select class="form-select" name="categoria" aria-label="Categoria">
 
-            </select>
+                        <?php
+                        include 'conexao.php';
+                        $sql = "SELECT * FROM categoria order by nome_categoria ASC";
+                        $buscar = mysqli_query($conexao,$sql);
+
+                        while ($array = mysqli_fetch_array($buscar)) {
+
+                            $id_categoria = $array['id_categoria'];
+                            $nome_categoria = $array['nome_categoria'];
+                        ?>
+
+                        <option><?php echo $nome_categoria ?></option>
+
+                        <?php } ?>
+                      
+                    </select>
 
                 <div style="padding-top: 20px">
 
