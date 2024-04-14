@@ -64,6 +64,7 @@
 <div class="container" style="margin-top: 100px">
 
 <div class="row">
+
   <div class="col-sm-6 mb-3 mb-sm-0">
     <div class="card">
       <div class="card-body">
@@ -82,6 +83,26 @@
       </div>
     </div>
   </div>
+
+   <div class="col-sm-6 mb-3 mb-sm-0" style="margin-top: 20px;">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Adicionar Categoria</h5>
+        <p class="card-text">Clique aqui para adicionar nova categoria de produto.</p>
+        <a href="adicionar_categoria.php" class="btn btn-success">Cadastrar Categoria</a>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-6"style="margin-top: 20px;">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Cadastrar Fornecedor</h5>
+        <p class="card-text">Clique aqui para cadastrar novo fornecedor.</p>
+        <a href="#" class="btn btn-warning">Cadastrar Fornecedor</a>
+      </div>
+    </div>
+  </div>
+
 </div>
 
 
