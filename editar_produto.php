@@ -116,11 +116,11 @@ $id = $_GET['id'];
             <label>Garantia</label>
             <select class="form-select" name="garantia" aria-label="garantia">
                   <option selected>Selecione o tempo de garantia</option>
-                  <option value="1">3 meses</option>
-                  <option value="2">6 meses</option>
-                  <option value="3">12 meses</option>
-                  <option value="3">24 meses</option>
-                  <option value="3">Indeterminado</option>
+                  <option value="3 meses">3 meses</option>
+                  <option value="6 meses">6 meses</option>
+                  <option value="12 meses">12 meses</option>
+                  <option value="24 meses">24 meses</option>
+                  <option value="Indeterminado">Indeterminado</option>
 
                 </select>
 
