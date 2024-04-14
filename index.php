@@ -49,7 +49,7 @@
         /* Estilo para o rodapé */
         .rodape {
             text-align: center;
-            margin-top: 300px; /* Ajuste conforme necessário */
+            margin-top: 120px; /* Ajuste conforme necessário */
             color: #888; /* Cor cinza claro */
         }
     </style>
@@ -98,11 +98,11 @@
       <div class="card-body">
         <h5 class="card-title">Cadastrar Fornecedor</h5>
         <p class="card-text">Clique aqui para cadastrar novo fornecedor.</p>
-        <a href="#" class="btn btn-warning">Cadastrar Fornecedor</a>
+        <a href="adicionar_fornecedor.php" class="btn btn-warning">Cadastrar Fornecedor</a>
       </div>
     </div>
   </div>
-  
+
 </div>
 
 

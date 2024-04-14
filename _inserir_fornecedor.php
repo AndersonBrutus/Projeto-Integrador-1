@@ -3,9 +3,9 @@
 include 'conexao.php';
 
 
-$categoria = $_POST['categoria'];
+$fornecedor = $_POST['fornecedor'];
 
-$sql = "INSERT INTO categoria (categoria) values ('$categoria')";
+$sql = "INSERT INTO fornecedor (nome_form) values ('$fornecedor')";
 $inserir = mysqli_query($conexao,$sql);
 
 ?>
@@ -14,7 +14,7 @@ $inserir = mysqli_query($conexao,$sql);
 	<center>
 		<h3>Cadastrado com sucesso!</h3>
 		<div style="mardin-top: 10px">
-			<a href="adicionar_categoria.php" class="btn btn-sm btn-danger" style="color:#fff">Voltar</a>
+			<a href="adicionar_fornecedor.php" class="btn btn-sm btn-danger" style="color:#fff">Voltar</a>
 		</div>
 
 	</center>
