@@ -2,6 +2,10 @@
 <html>
 
 <head>
+
+    <div class="logo">
+        <img src="logo_spark.png" alt="Logo Spark" style="width: 100px;"> <!--Esse trecho de código coloquei o logo, mas preciso diminuir o tamanho dele-->
+    </div>
     	<meta charset="utf-8">
     	<meta name="viewport" content="width=device-width, initial-scale=1">
     	<title>Spark - Projeto Inegrador I</title>
@@ -11,7 +15,7 @@
     <style type="text/css">
 
         #tamanhoContainer {
-            width: 500px; <!-- Essa funçao serve para reduzir a largura do container -->
+            width: 500px;
         }
 
         #botao {
@@ -29,7 +33,7 @@
         <div class="container" id="tamanhoContainer" style="margin-top: 40px">
 
             <div style="text-align: right">
-                <a href="index.php" role="button" class="btn btn-sm btn-primary">Voltar</a>
+                <a href="menu.php" role="button" class="btn btn-sm btn-primary">Voltar</a>
             </div>
 
             <h4> Cadastro de Produtos</h4>
@@ -49,19 +53,19 @@
                   </div>
 
             <div style="padding-top: 20px">
-
+                <div class="form-group">
                     <label>Categoria</label>
                     <select class="form-select" name="categoria" aria-label="Categoria">
 
                         <?php
                         include 'conexao.php';
-                        $sql = "SELECT * FROM categoria order by nome_categoria ASC";
+                        $sql = "SELECT * FROM categoria order by categoria ASC";
                         $buscar = mysqli_query($conexao,$sql);
 
                         while ($array = mysqli_fetch_array($buscar)) {
 
                             $id_categoria = $array['id_categoria'];
-                            $nome_categoria = $array['nome_categoria'];
+                            $nome_categoria = $array['categoria'];
                         ?>
 
                         <option><?php echo $nome_categoria ?></option>
@@ -69,6 +73,7 @@
                         <?php } ?>
                       
                     </select>
+                </div>
 
             <div style="padding-top: 20px">
 

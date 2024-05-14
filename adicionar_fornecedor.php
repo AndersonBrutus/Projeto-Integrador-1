@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-
 	<div class="logo">
-        <img src="logo_spark.png" alt="Logo Spark"> <!--Esse trecho de código coloquei o logo, mas preciso diminuir o tamanho dele-->
+        <img src="logo_spark.png" alt="Logo Spark" style="width: 100px;"> <!--Esse trecho de código coloquei o logo, mas preciso diminuir o tamanho dele-->
   	</div>
 
 	<meta charset="utf-8">
@@ -25,7 +24,7 @@
 
 <div class="container" style="margin-top:40px; widht: 500px">
 	<div style="text-align: right">
-                <a href="index.php" role="button" class="btn btn-sm btn-primary">Voltar</a>
+                <a href="menu.php" role="button" class="btn btn-sm btn-primary">Voltar</a>
     </div>
 
 	<h4>Cadastro de Fornededor</h4>

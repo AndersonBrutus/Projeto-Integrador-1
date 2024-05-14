@@ -1,122 +1,89 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Menu</title>
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, user-scalable" />
+    <title>Tela de Login</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
-
-<style>
+    <style type="text/css">
         body {
-            background-image: url('fund.jpg'); /* Caminho relativo para a imagem de fundo */
+            background-image: url('fund2.jpg'); /* Caminho relativo para a imagem de fundo */
             background-size: cover; /* Ajusta o tamanho da imagem para cobrir todo o corpo */
             background-position: center; /* Centraliza a imagem */
+            margin: 0; /* Remove a margem padrão do corpo */
+            padding: 0; /* Remove o preenchimento padrão do corpo */
+            height: 50vh; /* Define a altura do corpo como 100% da altura da tela */
+        }
 
-             .titulo {
-            text-align: center;
-            margin-top: 50px; /* Ajuste conforme necessário */
-            font-weight: bold;
-            color: white; /* Cor branca */
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* Sombra com deslocamento horizontal 2px, deslocamento vertical 2px e desfoque 4px */
-    
+        #tamanho {
+            width: 350px;
+            margin-top: 150px;
+            border-radius: 10px;
+            border: 0px solid #f3f3f3;
+            background-color: #fff33;
+            padding: 50px; <!--Esse comando eu deixo a tela Stática-->
+            position: relative; /* Adicionado para posicionar os logotipos */
+        }
+
+        .logo-univesp {
+            position: absolute;
+            top: 40px;
+            right: 40px;
+        }
+
+        .logo-spark {
+            position: absolute;
+            top: 40px;
+            left: 40px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .btn-entrar {
+            float: right;
         }
     </style>
-
 
 </head>
-
-<div>
-
-  <div class="logo">
-        <img src="logo_spark.png" alt="Logo Spark">
-  </div>
-
-  <div class="titulo">
-        <h1>Módulo Estoque</h1>            
-  </div>
-
-<title>Sua Página</title>
-    <style>
-        .titulo {
-            text-align: center;
-            margin-top: 0px; /* Ajuste conforme necessário */
-            font-weight: bold;
-        }
-    </style>
-
-    <style>
-        /* Estilo para o rodapé */
-        .rodape {
-            text-align: center;
-            margin-top: 120px; /* Ajuste conforme necessário */
-            color: #888; /* Cor cinza claro */
-        }
-    </style>
-
-</div>
-
-
 <body>
 
+    <div class="container" id="tamanho">
+        <img src="logo_univesp.png" class="logo-univesp" width="100px" height="100px">
+        <img src="logo_spark.png" class="logo-spark" width="100px" height="100px">
+        <form action="index1.php" method="post">
+            <div class="form-group">
+                <label for="usuario">Usuário</label>
+                <input type="text" id="usuario" name="usuario" class="form-control" placeholder="Usuário" autocomplete="off" required>
+            </div>
 
+            <div class="form-group">
+                <label for="senha">Senha</label>
+                <input type="password" id="senha" name="senha" class="form-control" placeholder="Senha" autocomplete="off" required>
+            </div>
 
-<div class="container" style="margin-top: 100px">
-
-<div class="row">
-
-  <div class="col-sm-6 mb-3 mb-sm-0">
-    <div class="card">
-      <div class="card-body">
-        <h5 class="card-title">Adicionar Produto</h5>
-        <p class="card-text">Clique aqui para acessar o formulário de preenchimento de cadastro de produtos.</p>
-        <a href="adicionar_produto.php" class="btn btn-danger">Produtos</a>
-      </div>
+            <button type="submit" class="btn btn-sm btn-success btn-entrar">Entrar</button>
     </div>
-  </div>
-  <div class="col-sm-6">
-    <div class="card">
-      <div class="card-body">
-        <h5 class="card-title">Lista de Produtos</h5>
-        <p class="card-text">Clique aqui para visualisar a lista, editar e excluir produtos.</p>
-        <a href="listar_produtos.php" class="btn btn-primary">Lista de Produtos</a>
-      </div>
+    </form>
+    
+    <div style="margin-top: 10px">
+        <center>
+            <small style="color: white">Você não possui cadastro? Clique <a href="cadastro_usuario_externo.php">  aqui</a></small> 
+        </center>
     </div>
-  </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
-   <div class="col-sm-6 mb-3 mb-sm-0" style="margin-top: 20px;">
-    <div class="card">
-      <div class="card-body">
-        <h5 class="card-title">Adicionar Categoria</h5>
-        <p class="card-text">Clique aqui para adicionar nova categoria de produto.</p>
-        <a href="adicionar_categoria.php" class="btn btn-success">Cadastrar Categoria</a>
-      </div>
-    </div>
-  </div>
-  <div class="col-sm-6"style="margin-top: 20px;">
-    <div class="card">
-      <div class="card-body">
-        <h5 class="card-title">Cadastrar Fornecedor</h5>
-        <p class="card-text">Clique aqui para cadastrar novo fornecedor.</p>
-        <a href="adicionar_fornecedor.php" class="btn btn-warning">Cadastrar Fornecedor</a>
-      </div>
-    </div>
-  </div>
-
-</div>
-
-
-</div>
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-
-
-<div class="rodape">
-        <p>Spark Peças e Acessórios</p>
-        <p>CNPJ: 15.791.970/0001-20</p>
+<div class="rodape" style="margin-top: 400px; text-align: center;">
+    <p style="color: grey;">by Spark Peças e Acessórios, Brazil, 2024</p>
 </div>
 
 
 </body>
 </html>
-

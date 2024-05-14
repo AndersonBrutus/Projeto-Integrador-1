@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
+
+    <div class="logo">
+        <img src="logo_spark.png" alt="Logo Spark" style="width: 100px;"> <!--Esse trecho de código coloquei o logo, mas preciso diminuir o tamanho dele-->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Listagem de Produtos</title>
@@ -10,10 +13,33 @@
 </head>
 <body>
 
+<?php
+
+session_start();
+$usuario = $_SESSION['usuario'];
+
+if(!isset($_SESSION['usuario'])) {
+  header('Location: index.php');
+
+}
+
+
+include 'conexao.php';
+
+$sql = "SELECT nivel_usuario FROM usuarios WHERE mail_usuario = '$usuario' and status='Ativo'";
+$buscar = mysqli_query($conexao,$sql);
+$array = mysqli_fetch_array($buscar);
+$nivel = $array['nivel_usuario'];
+
+
+?>
+
+
+
 <div class="container" style="margin-top: 40px">
 
 <div style="text-align: right;">
-        <a href="index.php" role="button" class="btn btn-sm btn-primary">Voltar</a>
+        <a href="menu.php" role="button" class="btn btn-sm btn-primary">Voltar</a>
 </div>
 
 <h3>Lista de Produtos</h3>
@@ -86,8 +112,19 @@
 
         <td><?php echo $garantia ?></td>
 
-        <td><a class="btn btn-warning btn-sm" style="color:#fff" href="editar_produto.php?id=<?php echo $id_estoque ?>" role="button"><i class="fa-regular fa-pen-to-square"></i>&nbsp;Editar</a>
+        <td>
+            <?php
+                if(($nivel == 1)||($nivel == 2)) {
+
+            ?>
+            <a class="btn btn-warning btn-sm" style="color:#fff" href="editar_produto.php?id=<?php echo $id_estoque ?>" role="button"><i class="fa-regular fa-pen-to-square"></i>&nbsp;Editar</a>
+            <?php }
+
+            if($nivel == 1) {
+            ?>
+
             <a class="btn btn-danger btn-sm" style="color:#fff" href="deletar_produto.php?id=<?php echo $id_estoque ?>" role="button"><i class="fa-regular fa-trash-can"></i>&nbsp;Excluir</a>
+        <?php } ?>
 
         </td>
         
